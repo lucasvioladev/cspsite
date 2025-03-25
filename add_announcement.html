@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Comunicado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Adicionar Novo Comunicado</h1>
+    <form id="announcementForm">
+        <label for="title">Título:</label>
+        <input type="text" id="title" name="title" required>
+        
+        <label for="date">Data:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <label for="description">Descrição:</label>
+        <textarea id="description" name="description" required></textarea>
+        
+        <button type="submit">Adicionar Comunicado</button>
+    </form>
+    <script>
+        document.getElementById('announcementForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Logic to handle form submission and save the announcement
+            const title = document.getElementById('title').value;
+        const date = document.getElementById('date').value;
+        const description = document.getElementById('description').value;
+
+        // Create a new announcement object
+        const newAnnouncement = {
+            title: title,
+            date: date,
+            description: description
+        };
+
+        // Save the new announcement to local storage
+        let announcements = JSON.parse(localStorage.getItem('announcements')) || { announcements: [] };
+        announcements.announcements.push(newAnnouncement);
+        localStorage.setItem('announcements', JSON.stringify(announcements));
+        alert('Comunicado adicionado com sucesso!');
+        });
+    </script>
+</body>
+</html>
+</create_file>

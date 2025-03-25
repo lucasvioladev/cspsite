@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSP - Daily News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bodyh">
+    <div class="sidenav">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Seal_of_the_California_Department_of_Parks_and_Recreation.svg/1200px-Seal_of_the_California_Department_of_Parks_and_Recreation.svg.png" alt="Logo CSP" class="logocsp2">
+        <a href="csp.html">Home</a>        
+        <a href="#">Roster</a>
+        <a href="#">Licenças</a>
+        <a href="#">Registros de Patrulha</a>
+        <a href="#">Resgistros Criminais</a>
+    </div>
+    <div class="homepage">
+        <div class="nots" id="announcement-container">
+            <button onclick="window.location.href='add_announcement.html'">Adicionar Comunicado</button>
+            <h2>COMUNICADOS</h2>
+        </div>
+    </div>
+    <script>
+        const announcements = JSON.parse(localStorage.getItem('announcements')) || { announcements: [] };
+        const container = document.getElementById('announcement-container');
+        announcements.announcements.forEach((announcement) => {
+            const announcementDiv = document.createElement('div');
+            announcementDiv.className = 'noticia1';
+            announcementDiv.style.marginBottom = '20px';
+            announcementDiv.innerHTML = `
+                <div class="news-article">
+                    <h3>${announcement.title}</h3>
+                    <p>Data: ${announcement.date}</p>
+                    <p>${announcement.description}</p>
+                </div>
+            `;
+            container.appendChild(announcementDiv);
+        });
+    </script>
+</body>
+</html>
+</create_file>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>California State Parks</title>
+    <link rel="icon" type="image/x-icon" href="/images/csp.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: rgb(27, 43, 0);">
+    <div class="main-login">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Seal_of_the_California_Department_of_Parks_and_Recreation.svg/1200px-Seal_of_the_California_Department_of_Parks_and_Recreation.svg.png" alt="Logo CSP" class="logocsp">
+        </div>
+        <div class="login">
+            <h1 class="lg1">LOGIN</h1>
+            <input placeholder="usuário" type="text" class="logininput" id="username">
+            <h1 class="lg1">SENHA</h1>
+            <input type="password" name="pw1" id="pd1" placeholder="senha">
+            <button class="entrar" id="loginButton">ENTRAR</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('pd1').value;
+
+            // Simple validation
+            if (username && password) {
+            fetch('users.json')
+                .then(response => response.json())
+                .then(data => {
+                    const user = data.users.find(user => user.username === username && user.password === password);
+                    if (user) {
+                        // Redirect to csp.html
+                        window.location.href = 'csp.html';
+                    } else {
+                        alert('Usuário ou senha incorretos.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar os dados dos usuários:', error);
+                    alert('Erro ao autenticar. Tente novamente mais tarde.');
+                });
+
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        });
+    </script>
+</body>
+</html>
+</create_file>
