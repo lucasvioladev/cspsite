@@ -102,17 +102,27 @@ input {
     margin: 30px;
 }
 
-/* .bodyh {
-    background-image: url(https://i.etsystatic.com/34111802/r/il/eb8e08/3644387612/il_fullxfull.3644387612_oyi4.jpg);
-    background-size: 500px;
-    background-repeat: no-repeat;
-} */
-
-
 #adminbt {
     margin-left: 290px;
 }
 
 #adminbt:hover {
     cursor: pointer;
+}
+
+.ncsp {
+    background-image: url(https://media.discordapp.net/attachments/1171519091991908354/1354091111433637940/sapr.jpg?ex=67e4071e&is=67e2b59e&hm=4cbed229f54eb6e95dd34e4461e018e7c98c34706bf7f5b57816de60183ec8e4&=&format=webp&width=827&height=465);
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+footer {
+    background-color: rgb(11, 41, 16);
+    padding: 10px;
+    text-align: center;
+    font-size: 6px;
+    position: fixed; /* Fix the footer to the bottom */
+    bottom: 0; /* Align it to the bottom of the page */
+    left: 0;
+    width: 100%; /* Ensure it spans the full width */
 }
