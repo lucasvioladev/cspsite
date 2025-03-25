@@ -96,6 +96,11 @@ input {
     background-color: #c9c9c973;
     padding: 10px;
     border-radius: 15px;
+    transition: .2s;
+}
+
+.noticia1:hover {
+    transform: scale(1.2);
 }
 
 .nots {
@@ -107,5 +112,21 @@ input {
 }
 
 #adminbt:hover {
+    cursor: pointer;
+}
+
+button {
+    text-transform: uppercase;
+    background-color: rgb(12, 31, 17);
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bolder;
+    transition: .2s;
+}
+
+button:hover {
+    transform: scale(1.2);
     cursor: pointer;
 }
