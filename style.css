@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Roboto';
 }
 
 body {
@@ -66,7 +68,7 @@ input {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(27, 43, 0);
+    background-color: #0b2e13;
     overflow-x: hidden;
     padding-top: 20px;
     font-style: none;
@@ -76,15 +78,15 @@ input {
     padding: 6px 6px 6px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: rgb(255, 255, 255);
     display: block;
     transition: .2s;
 }
   
 .sidenav a:hover {
     color: #f1f1f1;
-    background-color: #181818;
-    transform: scale(1.2)
+    background-color: #4C7449;
+    transform: scale(1.2);
 }
   
 .homepage {
@@ -103,8 +105,12 @@ input {
     transform: scale(1.2);
 }
 
-.nots {
-    margin: 30px;
+.bodyh {
+    background-image: url('https://media.discordapp.net/attachments/1343640631926456343/1354171937378668715/Design_sem_nome_1.png?ex=67e45265&is=67e300e5&hm=c867a2276cf3867461d732721f1d9ce90696f9849c574d90cdc81df699486cc0&=&format=webp&quality=lossless&width=480&height=538');
+    background-size: 690px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-attachment: fixed;
 }
 
 #adminbt {
