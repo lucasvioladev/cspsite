@@ -14,21 +14,12 @@ body {
     align-content: center;
 }
 
-.logininput {
+input {
+    color: black;
     border-color: black;
-    border-style: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
-    background-color: white;
-    padding: 5px;
-}
-
-#pd1 {
-    border-color: black;
-    border-style: none;
-    color: white;
-    font-weight: bold;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 5px;
 }
 
